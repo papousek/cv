@@ -39,6 +39,7 @@
 \newcommand{\mycvcomputer}[4]{\cvcomputer{\textbf{#1}}{#2}{\textbf{#3}}{#4}}
 
 \newcommand{\myproject}[6]{\tlcventry[timelinecolor]{#1}{#2}{#3}{#4}{}{}{#5~\resource{#6}}}
+\newcommand{\onlinecourse}[2]{\cvline{}{\textbf{#1}\newline\fontsize{8}{10}\selectfont\color{contactcolor} $\square$ \httplink{#2}}}
 
 %----------------------------------------------------------------------------------
 % GitHub
@@ -190,3 +191,16 @@
   \end{scope}
 \end{tikzpicture}
 }
+
+% Developer/Contributor footnotes
+\usepackage[bottom,norule,symbol*]{footmisc}
+\newcommand*{\devnotes}[3]{%
+\vfill
+\footnotetext[1]{#1}
+\footnotetext[2]{#2}
+\footnotetext[3]{#3}
+}
+
+\newcommand*{\familiar}{\footnotemark[1]}
+\newcommand*{\advanced}{\footnotemark[2]}
+\newcommand*{\contributor}{\footnotemark[3]}
