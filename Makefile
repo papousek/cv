@@ -1,13 +1,20 @@
 TO_CLEAN=aux log blg bib~ bbl tex~ out toc dvi
-LANGS=cs en
+LANGS=en
+TEX_ARGS=--shell-escape -interaction batchmode
 
 .PHONY: all
-all: cv clean
+all: terka honza clean
 
-.PHONY: cv
-cv:
+.PHONY: terka
+terka:
 	for LANG in $(LANGS); do \
-		pdflatex  jan_papousek_"$$LANG".tex; \
+		pdflatex ${TEX_ARGS} tereza_dolezalova_"$$LANG".tex; \
+	done; \
+
+.PHONY: honza
+honza:
+	for LANG in $(LANGS); do \
+		pdflatex ${TEX_ARGS} jan_papousek_"$$LANG".tex; \
 	done; \
 
 .PHONY: clean

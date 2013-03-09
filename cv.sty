@@ -6,16 +6,16 @@
 \usepackage{amsmath}
 \usepackage{metalogo}
 \usepackage{moderntimeline}
+\usepackage{xifthen}
+\usepackage{ifthen}
 \usepackage{tikz}
 \usepackage[scale=0.85]{geometry}
 
 %----------------------------------------------------------------------------------
 % Scales and Sizes
 %----------------------------------------------------------------------------------
-\tlmaxdates{2008}{2013}
 \tlwidth{0.8ex}
 \tltext{\tiny}
-\linespread{0.9}
 
 %----------------------------------------------------------------------------------
 % Colors
@@ -33,8 +33,12 @@
 }
 
 \newcommand{\contact}[4]{
-\newline{\fontsize{8}{10}\selectfont\color{contactcolor}{$\square$ #1 $\square$ #2 $\square$ #3 $\square$ \httplink{#4}}}
-}
+\newline{\fontsize{8}{10}\selectfont\color{contactcolor}{
+\ifthenelse{\isempty{#1}}{}{$\square$ #1}
+\ifthenelse{\isempty{#2}}{}{$\square$ #2}
+\ifthenelse{\isempty{#3}}{}{$\square$ #3}
+\ifthenelse{\isempty{#4}}{}{$\square$ \httplink{#4}}
+}}}
 
 \newcommand{\mycvcomputer}[4]{\cvcomputer{\textbf{#1}}{#2}{\textbf{#3}}{#4}}
 
