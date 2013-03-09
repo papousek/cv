@@ -26,3 +26,6 @@ clean:
 		done \
 	done \
 
+html:
+	pdf2htmlEX --zoom=2 jan_papousek_en.pdf;
+	pdf2htmlEX --zoom=2 tereza_dolezalova_en.pdf;
