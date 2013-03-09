@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# This script uploads CVs to the server
+
+make html
+scp tereza_dolezalova_en.html jpapouse@zimodej.cz:/var/www/zimodej.cz/subdomeny/dodo/index.html
+scp jan_papousek_en.html jpapouse@zimodej.cz:/var/www/zimodej.cz/subdomeny/papi/index.html
+
