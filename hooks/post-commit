@@ -4,7 +4,7 @@
 
 make html
 scp tereza_dolezalova_casual_en.html jpapouse@zimodej.cz:/var/www/zimodej.cz/subdomeny/dodo/index.html
-scp jan_papousek_en.html jpapouse@zimodej.cz:/var/www/zimodej.cz/subdomeny/papi/index.html
+scp jan_papousek_job_en.html jpapouse@zimodej.cz:/var/www/zimodej.cz/subdomeny/papi/index.html
 scp jaromir_dolezal_cs.html jpapouse@zimodej.cz:/var/www/zimodej.cz/subdomeny/dolezal/index.html
 
 ssh jpapouse@zimodej.cz -t "rm -rf /var/www/zimodej.cz/subdomeny/papi/download; mkdir /var/www/zimodej.cz/subdomeny/papi/download"
