@@ -32,6 +32,8 @@ honza:
 		for LANG in $(LANGS); do \
 			if [ -f jan_papousek_"$$MODE"_"$$LANG".tex ]; then \
 				pdflatex ${TEX_ARGS} jan_papousek_"$$MODE"_"$$LANG".tex; \
+				bibtex jan_papousek_"$$MODE"_"$$LANG"; \
+				pdflatex ${TEX_ARGS} jan_papousek_"$$MODE"_"$$LANG".tex; \
 				make clean; \
 			fi; \
 		done; \
